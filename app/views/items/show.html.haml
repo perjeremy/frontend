@@ -64,6 +64,8 @@
               %h6 Created Date
               %p= @item.created_date
               = link_to 'View on timeline »', timeline_path(anchor: "/?year=#{@item.year}&item_id=#{@item.id}")
+              %br
+              = link_to 'View on map »', map_path(anchor: "/?lat=#{@item.coordinates[0][0].strip}&lng=#{@item.coordinates[0][1].strip}")
             .moduleRight
               %img{:alt => "Timeline", :src => "/assets/moduleImg1.jpg"}/
         / - if is_location_present

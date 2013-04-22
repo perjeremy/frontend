@@ -17,9 +17,25 @@ MapWrapper = L.Class.extend
   _requestsPool: []
   _openPopups:   []
 
+  getQueryString: ->
+    querystring = location.hash.substring(location.hash.indexOf("?") + 1).split("&")
+    queryObj = {}
+    i = 0
+
+    while i < querystring.length
+      name = querystring[i].split("=")[0]
+      value = querystring[i].split("=")[1]
+      queryObj[name] = value
+      i++
+    return querystring
+
   initialize: (domId)->
+    queryObj = this.getQueryString()
     this.map = L.map 'map',
-      center: new L.LatLng(38, -93)
+      center: if queryObj['lat'] && queryObj['lng']
+                new L.LatLng(queryObj['lat'], queryObj['lng'])
+              else
+                new L.LatLng(38, -93)
       zoom: 4
       layers: this.getBaseLayer()
     t = this
