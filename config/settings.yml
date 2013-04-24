@@ -65,4 +65,4 @@ ui:
         - sound
       video:
   session:
-    forms_in_popups: false
+    forms_in_popups: true

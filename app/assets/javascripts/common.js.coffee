@@ -41,6 +41,9 @@ jQuery ->
       $('#states').fadeIn()
       $.colorbox.resize({height: $('#cboxContent').outerHeight()})
 
+  $('#loginBox .btn, #signupBox .btn').click ->
+    document.cookie = '_dpla_no_cache=1; path=/'
+
   $('#states .breadCrumbs li.countries a').click ->
     $('#states').fadeOut ->
       $('#countries').fadeIn()
