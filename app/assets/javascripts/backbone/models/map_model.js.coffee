@@ -1,0 +1,1 @@
+class DPLA.MapModel extends Backbone.Model

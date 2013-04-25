@@ -20,6 +20,7 @@ gem 'navigasmic'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'page_title_helper'
+gem 'rails-backbone'
 
 gem 'dalli'
 gem 'httparty'

@@ -23,17 +23,24 @@
 //= require vendor/main.js
 //= require vendor/plugins.js
 //= require vendor/touch.js
+
+//= require underscore
+//= require backbone
+
 //
 //= require jquery_ujs
 //= require leaflet
 //= require leaflet.markercluster
 //
+//= require_tree ./backbone
+
 //= require search.js.coffee
 //= require timeline.js.coffee
 //= require spikes.js.coffee
 //= require common.js.coffee
-//= require map.js.coffee
 //= require saved_searches.js.coffee
 //= require saved_lists.js.coffee
 //= require subjects.js.coffee
 //= require share-ie.js.coffee
+//= require map.js.coffee
+

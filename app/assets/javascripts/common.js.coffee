@@ -2,6 +2,7 @@ window.image_loading_error = (image)->
   $(image).remove()
 
 jQuery ->
+
   if $('input#q').val().length == 0
     $('input#q').focus()
 
